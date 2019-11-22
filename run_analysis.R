@@ -45,7 +45,7 @@ all_subjects <- bind_rows(subject_train,subject_test)
 # Step 11 - Join all the Subjects with X and Y/Activity data created in  step 9
 all_X_Act_Sub <- bind_cols(all_subjects, all_X_Act)
 
-# Step 12 - Crarte a tidy data by with the average of each variable for each activity and each subject
+# Step 12 - Create a tidy data by with the average of each variable for each activity and each subject
 tidyDataSet <- 
 all_X_Act_Sub %>%
   group_by(Subject,Activity_Name) %>%
